@@ -6,7 +6,7 @@ export default function ParkingMonitor() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/parking-data');
+         const response = await fetch('https://panasheparking.vercel.app/api/parking-data');
         const data = await response.json();
         setParkingSlots(data.parkingSlots);
       } catch (error) {
